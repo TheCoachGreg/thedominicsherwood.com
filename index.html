@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dominic Sherwood — Actor</title>
+  <meta name="description" content="Dominic Sherwood — English actor. Shadowhunters, Vampire Academy, Partner Track, Penny Dreadful. Currently filming White Tide; featured in The Littles.">
+  <meta property="og:title" content="Dominic Sherwood — Actor">
+  <meta property="og:description" content="Shadowhunters · Vampire Academy · Partner Track · Penny Dreadful">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thedominicsherwood.com/">
+  <meta property="og:image" content="https://thedominicsherwood.com/images/hero-1200.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2313110D'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23C6A063' text-anchor='middle'%3EDS%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #13110D;
+      --card: #211C16;
+      --card-tint: #2A2318;
+      --cream: #ECE5D6;
+      --gold: #C6A063;
+      --muted: #968C7C;
+      --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.015em; }
+
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 22%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(19, 17, 13, 0.92) 0%, rgba(19, 17, 13, 0.35) 45%, rgba(19, 17, 13, 0.15) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding-bottom: 72px;
+      animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .hero h1 {
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      line-height: 1.05;
+      margin: 14px 0 12px;
+    }
+    .hero .credits { color: var(--cream); opacity: 0.85; font-size: 1.02rem; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-content { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 88px 0 8px; }
+    .section-label { font-family: var(--serif); font-size: 1.5rem; color: var(--gold); margin: 40px 0 20px; }
+    .num { color: var(--muted); margin-right: 10px; }
+
+    /* Upcoming card */
+    .upcoming {
+      background: var(--card);
+      border-radius: 6px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .project .status {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+    }
+    .project h3 { font-size: 1.6rem; margin: 6px 0 2px; }
+    .project .genre { color: var(--gold); font-size: 0.92rem; margin-bottom: 10px; }
+    .project p.desc { color: var(--muted); max-width: 62ch; }
+    .project.tinted {
+      background: var(--card-tint);
+      border-radius: 6px;
+      padding: 24px;
+    }
+
+    /* Previous grid */
+    .prev-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .credit {
+      background: var(--card);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+    .credit h3 { font-size: 1.18rem; margin-bottom: 4px; }
+    .credit .role { color: var(--muted); font-size: 0.92rem; }
+
+    /* About */
+    .about p { color: var(--cream); opacity: 0.88; max-width: 68ch; margin-bottom: 1em; }
+
+    /* Contact */
+    .contact-block { color: var(--cream); }
+    .contact-block strong {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .contact-block > div { margin-bottom: 18px; }
+
+    footer {
+      margin-top: 88px;
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(236, 229, 214, 0.08);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 720px) {
+      section { padding: 64px 0 8px; }
+      .upcoming { padding: 26px; }
+      .prev-grid { grid-template-columns: 1fr; }
+      .hero-content { padding-bottom: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <img src="images/hero-2000.jpg"
+         srcset="images/hero-1200.jpg 1200w, images/hero-2000.jpg 2000w"
+         sizes="100vw"
+         alt="Dominic Sherwood — black and white portrait"
+         fetchpriority="high">
+    <div class="wrap hero-content">
+      <p class="eyebrow">Actor</p>
+      <h1>Dominic Sherwood</h1>
+      <p class="credits">Shadowhunters &middot; Vampire Academy &middot; Partner Track &middot; Penny Dreadful</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="work" class="wrap">
+      <p class="eyebrow">Selected Work</p>
+
+      <h2 class="section-label"><span class="num">01</span>Upcoming</h2>
+      <div class="upcoming">
+        <div class="project">
+          <p class="status">In Development</p>
+          <h3>The Littles</h3>
+          <p class="genre">Horror &middot; Paramount</p>
+          <p class="desc">Written and directed by Andrew Duplessie, this stop-motion and live-action horror short stars Violet McGraw alongside Janel Parrish and Dominic. Animated by Anthony Scott (The Nightmare Before Christmas) with puppets from Katy Strutz (Guillermo del Toro&rsquo;s Pinocchio), it premiered to a sold-out crowd at New York Comic Con, won at the Indy Shorts Film Festival, and is being adapted as a feature at Paramount.</p>
+        </div>
+        <div class="project tinted">
+          <p class="status">In Production</p>
+          <h3>White Tide</h3>
+          <p class="genre">Film &middot; Action-Thriller</p>
+          <p class="desc">Dominic stars as Jack in this action-thriller shot in Puglia, directed by Paul Raschid. Raschid is a BAFTA Scotland-winning British filmmaker whose credits include the festival horror White Chamber and the interactive thriller The Complex.</p>
+        </div>
+      </div>
+
+      <h2 class="section-label"><span class="num">02</span>Previous</h2>
+      <div class="prev-grid">
+        <div class="credit">
+          <h3>Shadowhunters</h3>
+          <p class="role">Jace Herondale &middot; Series &middot; Freeform</p>
+        </div>
+        <div class="credit">
+          <h3>Partner Track</h3>
+          <p class="role">Jeff Murphy &middot; Series &middot; Netflix</p>
+        </div>
+        <div class="credit">
+          <h3>Vampire Academy</h3>
+          <p class="role">Christian Ozera &middot; Film</p>
+        </div>
+        <div class="credit">
+          <h3>Penny Dreadful: City of Angels</h3>
+          <p class="role">Kurt &middot; Series</p>
+        </div>
+        <div class="credit">
+          <h3>Eraser: Reborn</h3>
+          <p class="role">Film</p>
+        </div>
+        <div class="credit">
+          <h3>Taylor Swift &mdash; Style</h3>
+          <p class="role">Music Video</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="wrap about">
+      <p class="eyebrow">About</p>
+      <h2 class="section-label">Dominic</h2>
+      <p>Dominic Sherwood is an English actor, born in Tunbridge Wells, Kent in 1990. He grew up in Kent, studied drama in Maidstone and Sevenoaks, and worked abroad before committing to acting full time.</p>
+      <p>His early credits include a young Mick Jagger in Not Fade Away and Christian Ozera in Vampire Academy. In 2015 he appeared in Taylor Swift&rsquo;s &lsquo;Style&rsquo; video, and later that year was cast as Jace Herondale in Freeform&rsquo;s Shadowhunters, which he led across three seasons. He has since worked across television and film, from Kurt in Penny Dreadful: City of Angels to Jeff Murphy in Netflix&rsquo;s Partner Track.</p>
+      <p>He is currently filming the action-thriller White Tide and features in the horror short The Littles. He shares his work on Instagram at <a href="https://www.instagram.com/domsherwood/" target="_blank" rel="noopener">@domsherwood</a>.</p>
+    </section>
+
+    <section id="contact" class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section-label">Contact</h2>
+      <div class="contact-block">
+        <div>
+          <strong>Enquiries</strong>
+          <a href="mailto:hello@thedominicsherwood.com">hello@thedominicsherwood.com</a>
+        </div>
+        <div>
+          <strong>Follow</strong>
+          <a href="https://www.instagram.com/domsherwood/" target="_blank" rel="noopener">@domsherwood</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">&copy; 2026 Dominic Sherwood. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
