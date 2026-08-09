@@ -136,6 +136,38 @@
     /* About */
     .about p { color: var(--cream); opacity: 0.88; max-width: 68ch; margin-bottom: 1em; }
 
+    /* Instagram */
+    .ig-sub { color: var(--muted); margin: -8px 0 24px; }
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .ig-grid a { display: block; border-radius: 3px; overflow: hidden; }
+    .ig-grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.25s ease;
+    }
+    .ig-grid a:hover img { opacity: 0.82; }
+    .btn {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 12px 26px;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+    .btn:hover { background: var(--gold); color: var(--bg); text-decoration: none; }
+    @media (max-width: 720px) {
+      .ig-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+
     /* Contact */
     .contact-block { color: var(--cream); }
     .contact-block strong {
@@ -237,16 +269,19 @@
       <p>He is currently filming the action-thriller White Tide and features in the horror short The Littles. He shares his work on Instagram at <a href="https://www.instagram.com/domsherwood/" target="_blank" rel="noopener">@domsherwood</a>.</p>
     </section>
 
-    <section id="contact" class="wrap">
-      <p class="eyebrow">Get in touch</p>
-      <h2 class="section-label">Contact</h2>
-      <div class="contact-block">
-        <div>
-          <strong>Follow</strong>
-          <a href="https://www.instagram.com/domsherwood/" target="_blank" rel="noopener">@domsherwood</a>
-        </div>
+    <section id="instagram" class="wrap">
+      <p class="eyebrow">Instagram</p>
+      <h2 class="section-label">@domsherwood</h2>
+      <p class="ig-sub">Behind the scenes, on set, and in print.</p>
+      <div class="ig-grid">
+        <a href="https://www.instagram.com/domsherwood/p/C4ydPWnvXCD/" target="_blank" rel="noopener"><img src="images/ig-dog.jpg" alt="Instagram post by Dominic Sherwood" loading="lazy"></a>
+        <a href="https://www.instagram.com/domsherwood/p/DA28TyNuAcL/" target="_blank" rel="noopener"><img src="images/ig-party.jpg" alt="Instagram post by Dominic Sherwood" loading="lazy"></a>
+        <a href="https://www.instagram.com/domsherwood/p/DSFWYTcFNmq/" target="_blank" rel="noopener"><img src="images/ig-littles.jpg" alt="Instagram post by Dominic Sherwood" loading="lazy"></a>
+        <a href="https://www.instagram.com/domsherwood/p/DTwBu8-iGxi/" target="_blank" rel="noopener"><img src="images/ig-bike.jpg" alt="Instagram post by Dominic Sherwood" loading="lazy"></a>
       </div>
+      <a class="btn" href="https://www.instagram.com/domsherwood/" target="_blank" rel="noopener">Follow on Instagram</a>
     </section>
+
   </main>
 
   <footer>
